@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+        <title>Smart Container : Setting</title>
+        <link rel="stylesheet" type="text/css" href="static/css/Setting.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script>
+        $(document).ready(function () {
+            $('.click').css({
+                color:'#808080'
+            }).on({
+                mouseenter: function () {
+                    $(this).css('color','orange');
+                },
+                mouseleave: function () {
+                    $(this).css('color','#808080');
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $('.container').css({
+                opacity:'1'
+            }).on({
+                mouseenter: function () {
+                    $(this).css('opacity','0.5');
+                    $(this).css('border-color','#000000');
+                },
+                mouseleave: function () {
+                    $(this).css('opacity','1');
+                    $(this).css('border-color','#808080');
+                }
+            });
+        });
+        </script>
+    </head>
+
+    <body>
+        <!-- side -->
+        <div id="side">
+            <img class="logo" src="static/images/logo.png">
+            <div id="my">
+                <div class="private">
+                    <span id="user_image"><image src="static/images/profile.jpg" width="35px"></image></span><span id="user_name">Front님</span>
+                </div>
+                <input type="button" title="logout" value="Logout" id="logout_button" class="click" onclick="gologin()">
+                <!--수정하기 function 삭제-->
+            </div>
+
+            <!-- menu -->
+            <div id="menu">
+                <div class="menu_content">
+                    <img src="static/images/home.png" width="30px" height="30px">
+                    <a href="http://localhost:80/home" class="click" id="Home_click">Home</a>
+                </div>
+                <div class="menu_content">
+                    <img src="static/images/container.png" width="30px" height="30px">
+                    <a href="http://localhost:80/container" class="click" id="Container_click">Container</a>
+                </div>
+                <div class="menu_content">
+                    <img src="static/images/setting.png" width="30px" height="30px">
+                    <a href="http://localhost:80/setting" id="Setting_click">Setting</a>
+                </div>
+                <div></div>
+                <div></div>
+            </div>
+            <!-- //menu -->
+
+            <!-- footer -->
+            <div id="footer">
+                <p class="text">Copyright YAHAIT All Rights Reserved.</p>   
+            </div>
+            <!-- //footer -->
+        </div>
+        <!-- //side -->
+    </body>
+</html>

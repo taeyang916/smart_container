@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+        <title>Smart Container : Login</title>
+        <link rel="stylesheet" type="text/css" href="static/css/login.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+
+        <script>
+        $(document).ready(function () {
+            $('.anc').css({
+                color:'#808080'
+            }).on({
+                mouseenter: function () {
+                    $(this).css('color','orange');
+                    $(this).css('font-weight','bold');
+                },
+                mouseleave: function () {
+                    $(this).css('color','#808080');
+                    $(this).css('font-weight','normal');
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $('#login_button').css({
+                color:'#ffffff'
+            }).on({
+                mouseenter: function () {
+                    $(this).css('font-weight','bold');
+                },
+                mouseleave: function () {
+                    $(this).css('font-weight','normal');
+                }
+            });
+        });
+        </script>
+    </head>
+
+    <body>
+        <div id="wrap">
+            <!-- header -->
+            <div id="header">
+                <img class="logo" src="static/images/logo.png">
+            </div>
+            <!-- //header -->
+            <!-- container -->
+            <div id="container">
+                <!-- content -->
+                <div id="content">
+                    <form id="formLogin" name="formLogin" target="_top" action="http://localhost:80/result" method="POST">
+
+                        <fieldset class="login_form">
+                            <legend class="blind">로그인</legend>
+                            <div class="id_area">
+                                <span class="input_box">
+                                    <input class="input_text" type="text" id="id" name="id" placeholder="아이디"  maxlength="20" value="">
+                                </span>
+                            </div>
+                            <div class="pw_area">
+                                <span class="input_box">
+                                     <input class="input_text"
+                                         type="password" id="pw" name="pw" placeholder="비밀번호" maxlength="16">
+                                </span>
+                            </div>
+
+                            <input type="submit" title="로그인" value="로그인" id="login_button">
+                        </fieldset>
+                    </form>
+                    <div class="find">
+                        <a class="anc" target="_self" href="">아이디 찾기</a><span class="bar">&nbsp|&nbsp</span><a class="anc" target="_self" href="">비밀번호 찾기</a>
+                    </div>
+                </div>
+                <!-- //content -->
+            </div>
+            <!-- //container -->
+            <!-- footer -->
+            <div id="footer">
+                <p class="text">Copyright YAHAIT All Rights Reserved.</p>   
+            </div>
+            <!-- //footer -->
+        </div>
+    </body>
+</html>
