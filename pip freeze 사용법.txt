@@ -1,0 +1,9 @@
+https://2siwon.github.io/pip/2017/09/25/pip-002-pip-freeze.html
+
+pip freeze > requirements.txt
+후 push
+
+pull 받은 후
+
+pip install -r requirements.txt
+하면 다른 사람들이 받은 pip 모두 받을 수 있음
